@@ -1,0 +1,121 @@
+{
+  "categories": {
+    "browsers": {
+      "title": "browsers 🌐",
+      "description": "most popular browsers",
+      "apps": {
+        "chrome": {
+          "name": "chrome",
+          "description": "google chrome browser 🌐",
+          "cmd": "choco install chrome -y"
+        },
+        "firefox": {
+          "name": "firefox",
+          "description": "firefox browser 🦊",
+          "cmd": "choco install firefox -y"
+        },
+        "duckduckgo": {
+          "name": "duckduckgo",
+          "description": "high protected browser 🦆",
+          "cmd": "choco install duckduckgo -y"
+        },
+        "opera": {
+          "name": "opera",
+          "description": "opera browser 💃",
+          "cmd": "choco install opera -y"
+        }
+      }
+    },
+    "compilers": {
+      "title": "compilers ⚙️",
+      "description": "most necessary compilers",
+      "apps": {
+        "rust": {
+          "name": "rust ⚙️",
+          "description": "rustc compiler",
+          "cmd": "choco install rust -y"
+        },
+        "python": {
+          "name": "python 🐍",
+          "description": "cpython interpreter",
+          "cmd": "choco install python -y"
+        },
+        "openjdk": {
+          "name": "openjdk 🍵",
+          "description": "java development kit",
+          "cmd": "choco install openjdk -y"
+        },
+        "dlang": {
+          "name": "dlang 🚀",
+          "description": "dlang compiler",
+          "cmd": "choco install dlang -y"
+        },
+        "hare": {
+          "name": "hare 🐰",
+          "description": "hare compiler",
+          "cmd": "choco install hare -y"
+        },
+        "zig": {
+          "name": "zig ⚡",
+          "description": "zig compiler & build tool",
+          "cmd": "choco install zig -y"
+        },
+        "deno": {
+          "name": "deno 🦖",
+          "description": "deno js runtime",
+          "cmd": "choco install deno -y"
+        },
+        "go": {
+          "name": "go 🐹",
+          "description": "golang compiler",
+          "cmd": "choco install golang -y"
+        },
+        "nim": {
+          "name": "nim ✨",
+          "description": "nim compiler",
+          "cmd": "choco install nim -y"
+        },
+        "crystal": {
+          "name": "crystal 💎",
+          "description": "crystal lang compiler",
+          "cmd": "choco install crystal -y"
+        },
+        "luajit": {
+          "name": "luajit 🔥",
+          "description": "luajit compiler",
+          "cmd": "choco install luajit -y"
+        },
+        "kotlin": {
+          "name": "kotlin ☕",
+          "description": "kotlin compiler",
+          "cmd": "choco install kotlin -y"
+        },
+        "scala": {
+          "name": "scala 🐉",
+          "description": "scala compiler",
+          "cmd": "choco install scala -y"
+        },
+        "typescript": {
+          "name": "typescript 🔷",
+          "description": "typescript compiler (tsc)",
+          "cmd": "choco install typescript -y"
+        },
+        "fsharp": {
+          "name": "fsharp 🧮",
+          "description": "f# compiler",
+          "cmd": "choco install fsharp -y"
+        },
+        "ocaml": {
+          "name": "ocaml 🐫",
+          "description": "ocaml compiler",
+          "cmd": "choco install ocaml -y"
+        },
+        "vlang": {
+          "name": "vlang 🦕",
+          "description": "v compiler",
+          "cmd": "choco install vlang -y"
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,4 @@
 // импорты
-use std::fs::File;
-use once_cell::sync::Lazy;
 use serde::Deserialize;
 use std::collections::HashMap;
 
@@ -38,9 +36,3 @@ pub struct Config {
 // для статической переменной
 unsafe impl Send for Config {}
 unsafe impl Sync for Config {}
-
-// конфиги
-pub static APPS_CONFIG: Lazy<Config> = Lazy::new(|| {
-    let file = File::open("F:\\RustOtter\\config\\config.json").expect("Could not open config.json");
-    serde_json::from_reader(file).expect("Could not parse config.json")
-});

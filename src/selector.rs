@@ -1,10 +1,11 @@
 // конфиг
 use cliclack::Select;
-use crate::{apps, config};
+use crate::{apps};
+use crate::config::Config;
 
 // показ категории
-fn show_category(name: String) {
-    if let Some(category) = config::APPS_CONFIG.categories.get(&name).cloned() {
+fn show_category(config: &Config, name: String) {
+    if let Some(category) = config.categories.get(&name).cloned() {
         let mut menu: Select<String> = cliclack::select("🧭 Select app");
         for (app_id, app) in &category.apps {
             menu = menu.item(
@@ -23,11 +24,11 @@ fn show_category(name: String) {
             Ok(value) => {
                 match value.as_str() {
                     "back" => {
-                        run();
+                        run(config);
                     }
                     _ => {
                         let app = category.apps.get(&value).unwrap();
-                        apps::install_app(app);
+                        apps::install_app(app, config);
                     }
                 }
             }
@@ -41,10 +42,10 @@ fn show_category(name: String) {
     }
 }
 // запуск
-pub fn run() {
+pub fn run(config: &Config) {
     println!("Otter apps installer 🦦🌿.");
-    let mut menu: Select<String> = cliclack::select("Select app category: ");
-    for (category_id, category) in config::APPS_CONFIG.categories.clone() {
+    let mut menu: Select<String> = cliclack::select("select app category: ");
+    for (category_id, category) in config.categories.clone() {
         menu = menu.item(
             category_id,
             category.title,
@@ -56,7 +57,7 @@ pub fn run() {
         Ok(tweak) => {
             match tweak {
                 _ => {
-                    show_category(tweak.to_string());
+                    show_category(config, tweak.to_string());
                 }
             }
         }

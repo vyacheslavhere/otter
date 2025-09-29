@@ -5,7 +5,7 @@
 
 ### About
 Otter is simple installers manager. Create your own otter installation configs with categories.
-Build with:
+Built with:
 - cliclack
 - serde
 - serde_json
